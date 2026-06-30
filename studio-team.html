@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Studio Team, Antoinette Jordaine ARt</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Hanken+Grotesk:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream:#FAFAF7; --ink:#1A1A1A; --ink-soft:#4A4A46;
+    --red:#E53935; --blue:#1565C0; --yellow:#FDD835; --gold:#C9A84C; --grey:#F0F0EC;
+    --maxw:1180px; --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { -webkit-font-smoothing:antialiased; }
+  body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; font-weight:400; font-size:16.5px; line-height:1.6; }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 26px; }
+  h1,h2,h3,.word { font-family:'Josefin Sans',sans-serif; font-weight:300; letter-spacing:0.02em; line-height:1.14; }
+  .brand-art { text-transform:none; }
+  .eyebrow { font-family:'Josefin Sans',sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:0.32em; font-size:11.5px; color:var(--ink-soft); }
+  .serif { font-family:'Cormorant Garamond',serif; font-style:italic; }
+
+  /* HERO */
+  header.hero { text-align:center; padding:74px 0 40px; }
+  .hero .word { font-size:14px; letter-spacing:0.26em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:22px; }
+  .hero h1 { font-size:clamp(34px,6vw,62px); margin-bottom:18px; }
+  .hero .serif { font-size:clamp(19px,2.6vw,26px); color:var(--ink-soft); max-width:30ch; margin:0 auto; }
+  .dots { height:7px; width:74px; margin:26px auto 0; background-image:radial-gradient(circle,var(--ink) 0 2.5px,transparent 3px); background-size:13px 7px; background-repeat:repeat-x; background-position:center; }
+
+  /* GROUPS */
+  .group { padding:30px 0; }
+  .group-head { display:flex; align-items:baseline; gap:16px; margin-bottom:22px; flex-wrap:wrap; }
+  .group-head .tag { font-family:'Josefin Sans',sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:0.2em; font-size:12px; padding:5px 12px; color:#fff; border-radius:2px; }
+  .group-head h2 { font-size:clamp(22px,3vw,30px); }
+  .group-head .note { color:var(--ink-soft); font-size:14px; }
+  .g-creative .tag { background:var(--red); }
+  .g-business .tag { background:var(--blue); }
+  .g-ops .tag { background:var(--gold); }
+  .g-systems .tag { background:#111; }
+
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; }
+  .card { background:#fff; border:1px solid rgba(26,26,26,0.08); padding:22px 22px 24px; position:relative; overflow:hidden; }
+  .card .num { font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:30px; line-height:1; color:var(--grey); position:absolute; top:16px; right:18px; }
+  .g-creative .card { border-top:3px solid var(--red); }
+  .g-business .card { border-top:3px solid var(--blue); }
+  .g-ops .card { border-top:3px solid var(--gold); }
+  .g-systems .card { border-top:3px solid #111; }
+  .card h3 { font-size:19px; margin:2px 0 4px; padding-right:34px; }
+  .card .role { font-family:'Josefin Sans',sans-serif; text-transform:uppercase; letter-spacing:0.14em; font-size:10.5px; color:var(--ink-soft); margin-bottom:12px; }
+  .card p { color:var(--ink-soft); font-size:14.5px; }
+  .card .pill { display:inline-block; margin-top:13px; font-family:'Josefin Sans',sans-serif; text-transform:uppercase; letter-spacing:0.12em; font-size:10px; padding:3px 9px; border-radius:20px; }
+  .pill.gate { background:var(--yellow); color:#1A1A1A; }
+  .pill.rest { background:var(--grey); color:var(--ink-soft); }
+  .pill.new { background:var(--blue); color:#fff; }
+
+  /* TOGETHER */
+  .together { background:#111; color:var(--cream); margin-top:46px; padding:56px 0 60px; }
+  .together h2 { color:#fff; font-size:clamp(24px,3.4vw,38px); text-align:center; margin-bottom:8px; }
+  .together .lead { text-align:center; color:rgba(250,250,247,0.7); max-width:46ch; margin:0 auto 40px; font-size:15px; }
+  .links { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; margin-bottom:46px; }
+  .link { border:1px solid rgba(250,250,247,0.18); padding:20px; }
+  .link .h { font-family:'Josefin Sans',sans-serif; letter-spacing:0.06em; font-size:15px; margin-bottom:7px; color:var(--yellow); }
+  .link p { color:rgba(250,250,247,0.78); font-size:14px; }
+  .link.guardian { border-color:var(--yellow); background:rgba(253,216,53,0.06); }
+
+  .flows { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  .flow { background:rgba(250,250,247,0.04); border:1px solid rgba(250,250,247,0.12); padding:22px; }
+  .flow .h { font-family:'Josefin Sans',sans-serif; text-transform:uppercase; letter-spacing:0.18em; font-size:12px; color:#fff; margin-bottom:16px; }
+  .flow ol { list-style:none; counter-reset:step; }
+  .flow li { counter-increment:step; position:relative; padding:7px 0 7px 34px; color:rgba(250,250,247,0.82); font-size:14px; border-bottom:1px solid rgba(250,250,247,0.08); }
+  .flow li:last-child { border-bottom:0; }
+  .flow li::before { content:counter(step); position:absolute; left:0; top:7px; width:22px; height:22px; border-radius:50%; background:var(--yellow); color:#111; font-family:'Josefin Sans',sans-serif; font-size:12px; display:flex; align-items:center; justify-content:center; }
+  .flow li b { color:#fff; font-weight:500; }
+
+  /* FOOT */
+  footer { text-align:center; padding:46px 0 54px; }
+  footer .serif { font-size:21px; color:var(--ink-soft); }
+  footer .word { display:block; margin-top:16px; font-size:13px; letter-spacing:0.24em; text-transform:uppercase; color:var(--ink); }
+
+  @media (max-width:680px){ .flows{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="word">Antoinette Jordaine <span class="brand-art">ARt</span></div>
+    <h1>Your Studio Team</h1>
+    <p class="serif">Twelve quiet specialists, one studio. Here is who looks after what, and how they work together for you.</p>
+    <div class="dots"></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- CREATIVE CORE -->
+  <section class="group g-creative">
+    <div class="group-head"><span class="tag">Creative Core</span><h2>The heart of the studio</h2><span class="note">your art and your voice</span></div>
+    <div class="cards">
+      <div class="card"><span class="num">01</span><h3>Art Practice</h3><div class="role">Your creative right hand</div><p>Knows your style inside out, the pop art, mixed media, affirmations and bold colour, and guides commissions, exhibitions and how your portfolio grows.</p></div>
+      <div class="card"><span class="num">02</span><h3>Social &amp; Content</h3><div class="role">Instagram strategy</div><p>Plans both accounts (@antoinette.jordaine.london and @antoinettejordaine.art): what to post, when, and what is working.</p></div>
+      <div class="card"><span class="num">03</span><h3>Voice Guardian</h3><div class="role">Protects how you sound</div><p>Reads every caption, bio and message before it goes out, so it always sounds like you: warm and real, never corporate. The final say on all words.<span class="pill gate">Checks everything</span></p></div>
+    </div>
+  </section>
+
+  <!-- BUSINESS -->
+  <section class="group g-business">
+    <div class="group-head"><span class="tag">Business &amp; Revenue</span><h2>Turning art into a living</h2><span class="note">always art first</span></div>
+    <div class="cards">
+      <div class="card"><span class="num">04</span><h3>Business &amp; Growth</h3><div class="role">Strategy and pricing</div><p>Looks after how the studio earns: pricing, galleries and growing sustainably, always keeping the art first.</p></div>
+      <div class="card"><span class="num">05</span><h3>Opportunities Scout</h3><div class="role">Finds the good briefs</div><p>Hunts down open calls, commissions, grants and collaborations, and checks each one is genuinely worth your time.</p></div>
+      <div class="card"><span class="num">06</span><h3>Skincare</h3><div class="role">Resting for now</div><p>Ready to wake up and handle your skincare line, products, branding and regulations, whenever you are ready to share the plans.<span class="pill rest">Sleeping</span></p></div>
+      <div class="card"><span class="num">07</span><h3>PR &amp; Partnerships</h3><div class="role">Brand deals and press</div><p>Manages the Haze Agency relationship and brand deals, and keeps paid work clean and properly labelled.</p></div>
+    </div>
+  </section>
+
+  <!-- OPS -->
+  <section class="group g-ops">
+    <div class="group-head"><span class="tag">Operations &amp; Admin</span><h2>Keeping it all running</h2><span class="note">so you can create</span></div>
+    <div class="cards">
+      <div class="card"><span class="num">08</span><h3>Money &amp; Admin</h3><div class="role">The numbers</div><p>Invoices, tax, contracts and cash flow. Treats your practice like the real business it is, so money never becomes a worry.</p></div>
+      <div class="card"><span class="num">09</span><h3>Production</h3><div class="role">Shoots and assets</div><p>The hands-on planner for shoots: shot lists, scheduling and keeping your photos and assets organised.</p></div>
+    </div>
+  </section>
+
+  <!-- SYSTEMS -->
+  <section class="group g-systems">
+    <div class="group-head"><span class="tag">Intelligence &amp; Systems</span><h2>The eyes, ears and engine</h2><span class="note">behind the scenes</span></div>
+    <div class="cards">
+      <div class="card"><span class="num">10</span><h3>Research</h3><div class="role">Eyes on the art world</div><p>Scans for opportunities, trends and inspiration, and passes the best finds to the Opportunities Scout.</p></div>
+      <div class="card"><span class="num">11</span><h3>Studio Caretaker</h3><div class="role">Keeps things tidy</div><p>Looks after the studio's memory: notes, dashboards and your files, so nothing gets lost between sessions.</p></div>
+      <div class="card"><span class="num">12</span><h3>Website &amp; Tech</h3><div class="role">Your CTO</div><p>The newest of the team. Runs your website end to end, plus SEO so people find you on Google, and looks after the domain, hosting and contact form.<span class="pill new">New</span></p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- HOW THEY WORK TOGETHER -->
+<section class="together">
+  <div class="wrap">
+    <h2>How they work together</h2>
+    <p class="lead">They are not separate tools. They hand work to each other, so the right specialist touches each task.</p>
+
+    <div class="links">
+      <div class="link guardian"><div class="h">Voice Guardian sees it all</div><p>Number 3 checks anything written, captions, proposals, website words, before it reaches you or the public. Your voice is always protected.</p></div>
+      <div class="link"><div class="h">Tech and content team up</div><p>Website &amp; Tech (12) and Social &amp; Content (2) share the SEO work: one handles the technical side, the other the words and ideas.</p></div>
+      <div class="link"><div class="h">Opportunities flow in</div><p>Research (10) feeds the Opportunities Scout (5), who passes the strongest briefs to Business &amp; Growth (4).</p></div>
+      <div class="link"><div class="h">Money supports everything</div><p>Money &amp; Admin (8) quietly sits behind every deal, commission and brand partnership.</p></div>
+    </div>
+
+    <div class="flows">
+      <div class="flow">
+        <div class="h">A commission, start to finish</div>
+        <ol>
+          <li><b>Opportunity found</b> by the Scout (5)</li>
+          <li><b>Does it fit your art?</b> Art Practice (1) checks</li>
+          <li><b>You decide</b> whether to go for it</li>
+          <li><b>Proposal written</b> (4), voice-checked (3)</li>
+          <li><b>Contract and deposit</b> handled (8)</li>
+          <li><b>You create</b>, then it is delivered and invoiced (8)</li>
+          <li><b>Shared</b> on your socials (2 and 3)</li>
+        </ol>
+      </div>
+      <div class="flow">
+        <div class="h">An Instagram post</div>
+        <ol>
+          <li><b>Idea and plan</b> from Social &amp; Content (2)</li>
+          <li><b>Shoot planned</b> by Production (9)</li>
+          <li><b>You create</b> the piece or the photo</li>
+          <li><b>Voice check</b> on the caption (3)</li>
+          <li><b>Posted</b>, and results tracked (11 and 2)</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="serif">A whole team, so you can stay in the studio doing what only you can do.</p>
+    <span class="word">Antoinette Jordaine <span class="brand-art">ARt</span></span>
+  </div>
+</footer>
+
+</body>
+</html>
