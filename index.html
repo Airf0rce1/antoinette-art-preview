@@ -172,13 +172,14 @@
   }
   .affirm .quote.active { opacity: 1; }
   .affirm .quote em { color: var(--aff-accent, #FFE066); font-style: italic; transition: color 1.1s var(--ease); }
-  .affirm .by { display: block; margin-top: 30px; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.3em; text-transform: uppercase; font-size: 12px; color: var(--aff-fg, #FAFAF7); opacity: .6; transition: color 1.1s var(--ease); }
+  .affirm .by { display: block; margin-top: 30px; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.3em; text-transform: uppercase; font-size: 12px; color: var(--aff-by, #FAFAF7); opacity: .6; transition: color 1.1s var(--ease); }
 
   /* ============ ABOUT ============ */
   .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: center; }
   .about-grid .portrait { position: relative; }
   .about-grid .portrait img { width: 100%; }
-  .about-grid .portrait::before { content:""; position:absolute; left:-18px; top:-18px; width:90px; height:90px; background-image: radial-gradient(circle, var(--ink) 0 2.5px, transparent 3px); background-size: 15px 15px; background-repeat: repeat; opacity:.55; }
+  .about-grid .portrait::before { content:""; position:absolute; left:-18px; top:-18px; width:90px; height:90px; background-image: repeating-linear-gradient(90deg, var(--ink) 0 1.5px, transparent 1.5px 14px); background-repeat: repeat; opacity:.55; }
+  .about-body .about-name { font-size: clamp(26px, 3.4vw, 40px); margin-bottom: 22px; }
   .about-body p { margin-bottom: 20px; color: var(--ink-soft); }
   .about-body p:first-of-type { color: var(--ink); }
   .link-cta { display: inline-flex; align-items: center; gap: 9px; margin-top: 8px; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.18em; text-transform: uppercase; font-size: 12.5px; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 5px; transition: gap .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease); }
@@ -288,10 +289,6 @@
     </div>
     <div class="gallery">
       <a class="card reveal" href="#commissions">
-        <img src="./img/endless-love-dedication.jpg" alt="My Endless Love, dedication to Allegra, Ren and Zigi" />
-        <div class="overlay"><span class="t">My Endless Love</span><span class="m">Mural &middot; The Fire Station, Chelsea</span></div>
-      </a>
-      <a class="card reveal d1" href="#commissions">
         <img src="./img/body-series.jpg" alt="Body Series, acrylic, gold leaf and Swarovski crystals" />
         <div class="overlay"><span class="t">Body Series</span><span class="m">Acrylic, gold leaf &amp; Swarovski crystals &middot; 2025</span></div>
       </a>
@@ -328,7 +325,7 @@
       <p class="quote">Stay grounded, <em>find peace.</em></p>
       <p class="quote">All will be <em>ok in the end.</em></p>
     </div>
-    <span class="by">Words that affirm</span>
+    <span class="by">Affirm</span>
   </div>
 </section>
 
@@ -340,11 +337,9 @@
     </div>
     <div class="about-body reveal d1">
       <div class="stripe"></div>
-      <div class="eyebrow" style="margin-bottom:18px;">Hello, My Darlings</div>
-      <p>I'm Antoinette Jordaine, a London-based artist working across canvas, murals, and mixed media.</p>
-      <p>My work is built on bold colour, geometric form, and words that affirm. I believe that art heals, that speaking words into existence really does work, and that a painting on a wall can remind someone that all will be ok in the end.</p>
-      <p>From large-scale public murals to intimate canvases adorned with gold leaf and Swarovski crystals, every piece carries the same message: you are enough, you are loved, you are more.</p>
-      <a class="link-cta" href="#contact">More about me &rarr;</a>
+      <h2 class="about-name">Antoinette Jordaine</h2>
+      <p>Antoinette Jordaine is a Londoner, born, raised and based, a multi-disciplinary artist, storyteller and creative with over 20 years of experience across fashion, art, and the wider creative industries. Her work, rooted in affirmational art, is designed to uplift through life's trickier moments. Her practice is a journey of healing and nourishment for the soul, where creativity becomes a daily practice of presence, reflection and renewal. She believes we are all artists in our own right, and is grateful to her team and family for their support throughout her journey.</p>
+      <a class="link-cta" href="about.html">More about Antoinette Jordaine &rarr;</a>
     </div>
   </div>
 </section>
@@ -353,9 +348,9 @@
 <section id="commissions" class="commission">
   <div class="wrap inner reveal">
     <div class="stripe"></div>
-    <h2>Now open for commissions</h2>
-    <p>I create site-specific murals, interior installations, and bespoke artworks for homes, businesses, hospitals, and public spaces. Every commission starts with a conversation.</p>
-    <a class="link-cta" href="#contact">Enquire about a commission &rarr;</a>
+    <h2>For commissions and collaborations</h2>
+    <p>Antoinette creates bespoke murals, installations, and artworks for homes, businesses, and public spaces, as well as wearable art across clothing, accessories, and homeware. Every project starts with a conversation.</p>
+    <a class="link-cta" href="commissions.html">Enquire about a commission or collaboration &rarr;</a>
   </div>
 </section>
 
@@ -363,11 +358,11 @@
 <section class="ig">
   <div class="wrap reveal">
     <div class="eyebrow">Follow the studio</div>
-    <h2 style="font-size:clamp(26px,3.6vw,42px); margin-top:14px;">@antoinette.jordaine.london</h2>
+    <h2 style="font-size:clamp(26px,3.6vw,42px); margin-top:14px;">@antoinettejordaine.art</h2>
     <div class="strip">
-      <a href="https://instagram.com/antoinette.jordaine.london" target="_blank" rel="noopener"><img src="./img/stay-grounded.jpg" alt="Studio work on Instagram" /></a>
-      <a href="https://instagram.com/antoinette.jordaine.london" target="_blank" rel="noopener"><img src="./img/body-series.jpg" alt="Studio work on Instagram" /></a>
-      <a href="https://instagram.com/antoinette.jordaine.london" target="_blank" rel="noopener"><img src="./img/you-have-got-this.jpg" alt="Studio work on Instagram" /></a>
+      <a href="https://instagram.com/antoinettejordaine.art" target="_blank" rel="noopener"><img src="./img/stay-grounded.jpg" alt="Studio work on Instagram" /></a>
+      <a href="https://instagram.com/antoinettejordaine.art" target="_blank" rel="noopener"><img src="./img/body-series.jpg" alt="Studio work on Instagram" /></a>
+      <a href="https://instagram.com/antoinettejordaine.art" target="_blank" rel="noopener"><img src="./img/you-have-got-this.jpg" alt="Studio work on Instagram" /></a>
     </div>
   </div>
 </section>
@@ -449,17 +444,20 @@
     var section = rot.closest('.affirm');
     var quotes = rot.querySelectorAll('.quote');
     // black -> royal blue -> canary yellow -> bright red (loops)
+    // Quote text: white + yellow on every slide; on the yellow slide, white + blue.
+    // 'by' (Affirm label) keeps its original per-slide colour (--aff-by).
     var themes = [
-      { bg: '#1A1A1A', fg: '#FAFAF7', accent: '#FFE066' },
-      { bg: '#1565C0', fg: '#FAFAF7', accent: '#FFE066' },
-      { bg: '#FFE84D', fg: '#1A1A1A', accent: '#E53935' },
-      { bg: '#E53935', fg: '#FAFAF7', accent: '#FFE066' }
+      { bg: '#1A1A1A', fg: '#FAFAF7', accent: '#FFE066', by: '#FAFAF7' },
+      { bg: '#1565C0', fg: '#FAFAF7', accent: '#FFE066', by: '#FAFAF7' },
+      { bg: '#FFE84D', fg: '#FAFAF7', accent: '#1565C0', by: '#1A1A1A' },
+      { bg: '#E53935', fg: '#FAFAF7', accent: '#FFE066', by: '#FAFAF7' }
     ];
     function applyTheme(n) {
       var t = themes[n % themes.length];
       section.style.setProperty('--aff-bg', t.bg);
       section.style.setProperty('--aff-fg', t.fg);
       section.style.setProperty('--aff-accent', t.accent);
+      section.style.setProperty('--aff-by', t.by);
     }
     applyTheme(0);
     if (quotes.length < 2) return;

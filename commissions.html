@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Commissions and Collaborations, Antoinette Jordaine ARt</title>
+<meta name="description" content="Commission site-specific murals, installations, bespoke artworks and wearable art by London artist Antoinette Jordaine. Brand and creative collaborations welcome." />
+<meta name="robots" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
+<meta name="googlebot" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Hanken+Grotesk:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream:#FAFAF7; --ink:#1A1A1A; --ink-soft:#4A4A46;
+    --red:#E53935; --blue:#1565C0; --yellow:#FDD835; --gold:#C9A84C; --grey:#F0F0EC;
+    --maxw:1240px; --ease:cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--cream); color: var(--ink); font-family: 'Hanken Grotesk', system-ui, sans-serif; font-weight: 400; font-size: 17px; line-height: 1.7; overflow-x: hidden; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  .narrow { max-width: 760px; }
+  h1, h2, h3, .word { font-family: 'Josefin Sans', sans-serif; font-weight: 300; letter-spacing: 0.02em; line-height: 1.12; }
+  .eyebrow { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.32em; font-size: 12px; color: var(--ink-soft); }
+  .brand-art { text-transform: none; }
+  .stripe { height: 6px; width: 66px; background-image: radial-gradient(circle, var(--ink) 0 2.5px, transparent 3px); background-size: 12px 6px; background-repeat: repeat-x; background-position: left center; margin-bottom: 26px; }
+
+  /* NAV */
+  .nav { position: fixed; inset: 0 0 auto 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; background: rgba(250,250,247,0.92); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(26,26,26,0.07); }
+  .nav .word { font-size: 17px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink); }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
+  .nav-links a { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.18em; font-size: 12.5px; color: var(--ink); position: relative; padding: 4px 0; }
+  .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0; background: var(--gold); transition: width .35s var(--ease); }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
+
+  /* PAGE */
+  .page { padding: 150px 0 60px; }
+  .page h1 { font-size: clamp(34px, 5vw, 60px); margin-bottom: 18px; }
+  .lede { color: var(--ink-soft); font-size: 19px; max-width: 60ch; }
+
+  .block { margin-top: 64px; }
+  .block h2 { font-size: clamp(24px, 3.2vw, 36px); margin-bottom: 22px; }
+  .block p { margin-bottom: 20px; color: var(--ink-soft); }
+  .block p:first-of-type { color: var(--ink); }
+
+  /* void space for an image */
+  .image-slot { margin: 64px 0; height: clamp(260px, 42vw, 460px); background: var(--grey); position: relative; overflow: hidden; }
+  .image-slot::after { content: "Image"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.3em; text-transform: uppercase; font-size: 12px; color: var(--ink-soft); opacity: .5; }
+
+  .cta-row { margin-top: 56px; }
+  .link-cta { display: inline-flex; align-items: center; gap: 9px; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.18em; text-transform: uppercase; font-size: 12.5px; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 5px; transition: gap .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease); }
+  .link-cta:hover { gap: 16px; color: var(--red); border-color: var(--red); }
+
+  /* FOOTER */
+  footer { background: var(--cream); padding: 70px 0 40px; border-top: 1px solid rgba(26,26,26,.08); margin-top: 40px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  footer .word { font-size: 18px; letter-spacing: 0.24em; text-transform: uppercase; }
+  footer .tag { color: var(--ink-soft); margin-top: 12px; font-size: 15px; max-width: 30ch; }
+  .foot-col h4 { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; color: var(--ink-soft); margin-bottom: 14px; }
+  .foot-col a { display: block; font-size: 15px; padding: 4px 0; color: var(--ink); transition: color .3s var(--ease); }
+  .foot-col a:hover { color: var(--red); }
+  .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(26,26,26,.08); display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .nav-links { gap: 18px; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="word">Antoinette Jordaine <span class="brand-art">ARt</span></a>
+  <div class="nav-links">
+    <a href="index.html#work">Work</a>
+    <a href="about.html">About</a>
+    <a href="commissions.html">Commissions</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<main class="page">
+  <div class="wrap narrow">
+    <div class="stripe"></div>
+    <h1>Commissions and Collaborations</h1>
+    <p class="lede">Every project starts with a conversation.</p>
+
+    <div class="image-slot"></div>
+
+    <section class="block">
+      <h2>Commissions</h2>
+      <p>Antoinette creates site-specific murals, interior installations, and bespoke artworks for homes, businesses, and public spaces, as well as wearable art across clothing, accessories, and homeware. Every commission begins with a conversation, allowing the vision, space, and purpose behind the piece to shape the final outcome.</p>
+      <p>As a guide, public site-specific murals start from &pound;3,500 + VAT, private and residential murals from &pound;3,000 + VAT, and canvas or paper works from A2 size and above start from &pound;2,200 + VAT. Final pricing is dependent on scale, location, materials, timeframe, and complexity, and is confirmed following an initial discussion to fully understand the scope of the project.</p>
+      <p>A 50% deposit is required to confirm and commence each commission, with the remaining balance due upon completion. This secures your place in Antoinette's schedule and allows work to begin with full commitment from both sides.</p>
+    </section>
+
+    <section class="block">
+      <h2>Collaborations</h2>
+      <p>Antoinette is always open to hearing about brand and collaborative projects that align with her values and creative vision. While her standard pricing reflects the time, scale, and craftsmanship behind each piece, she's happy to discuss bespoke arrangements for the right collaboration.</p>
+    </section>
+
+    <div class="cta-row">
+      <a class="link-cta" href="index.html#contact">Start a conversation &rarr;</a>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="word">Antoinette Jordaine <span class="brand-art">ARt</span></div>
+        <p class="tag">Pop art, mixed media and murals. Bold colour, geometric form, and words that affirm. London.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="commissions.html">Commissions</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="mailto:hello@antoinettejordainelondon.com">hello@antoinettejordainelondon.com</a>
+        <a href="https://instagram.com/antoinettejordaine.art" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:roster@thehazeagency.com">Brand enquiries: The Haze Agency</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Antoinette Jordaine <span class="brand-art">ARt</span></span>
+      <span>London</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
