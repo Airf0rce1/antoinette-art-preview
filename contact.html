@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact, Antoinette Jordaine ARt</title>
+<meta name="description" content="Get in touch with Antoinette Jordaine for commissions, collaborations and enquiries." />
+<meta name="robots" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
+<meta name="googlebot" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Hanken+Grotesk:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream:#FAFAF7; --ink:#1A1A1A; --ink-soft:#4A4A46;
+    --red:#E53935; --blue:#1565C0; --yellow:#FDD835; --gold:#C9A84C; --grey:#F0F0EC;
+    --maxw:1240px; --ease:cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--cream); color: var(--ink); font-family: 'Hanken Grotesk', system-ui, sans-serif; font-weight: 400; font-size: 17px; line-height: 1.7; overflow-x: hidden; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  .narrow { max-width: 760px; }
+  h1, h2, h3, .word { font-family: 'Josefin Sans', sans-serif; font-weight: 300; letter-spacing: 0.02em; line-height: 1.12; }
+  .eyebrow { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.32em; font-size: 12px; color: var(--ink-soft); }
+  .brand-art { text-transform: none; }
+  .stripe { height: 6px; width: 66px; background-image: radial-gradient(circle, var(--ink) 0 2.5px, transparent 3px); background-size: 12px 6px; background-repeat: repeat-x; background-position: left center; margin-bottom: 26px; }
+
+  /* NAV */
+  .nav { position: fixed; inset: 0 0 auto 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; background: rgba(250,250,247,0.92); backdrop-filter: blur(8px); box-shadow: 0 1px 0 rgba(26,26,26,0.07); }
+  .nav .word { font-size: 17px; letter-spacing: 0.26em; text-transform: uppercase; color: var(--ink); }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
+  .nav-links a { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.18em; font-size: 12.5px; color: var(--ink); position: relative; padding: 4px 0; }
+  .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0; background: var(--gold); transition: width .35s var(--ease); }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
+
+  /* PAGE */
+  .page { padding: 150px 0 60px; }
+  .page h1 { font-size: clamp(34px, 5vw, 60px); margin-bottom: 18px; }
+  .lede { color: var(--ink-soft); font-size: 19px; max-width: 56ch; margin-bottom: 48px; }
+
+  /* FORM */
+  form.enquiry { max-width: 620px; }
+  .field { margin-bottom: 26px; }
+  .field label { display: block; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 12px; color: var(--ink-soft); margin-bottom: 10px; }
+  .field label .req { color: var(--red); }
+  .field input, .field textarea { width: 100%; background: #fff; border: 1px solid rgba(26,26,26,.16); color: var(--ink); padding: 14px 16px; font-family: inherit; font-size: 16px; transition: border-color .3s var(--ease); }
+  .field input:focus, .field textarea:focus { outline: none; border-color: var(--blue); }
+  .field textarea { min-height: 150px; resize: vertical; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .submit { background: var(--ink); color: var(--cream); border: 0; cursor: pointer; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.2em; text-transform: uppercase; font-size: 13px; padding: 15px 38px; transition: background .3s var(--ease); }
+  .submit:hover { background: var(--blue); }
+  .honey { position: absolute; left: -9999px; }
+
+  /* LEGAL */
+  .legal { margin-top: 80px; border-top: 1px solid rgba(26,26,26,.1); padding-top: 40px; }
+  .legal details { border-bottom: 1px solid rgba(26,26,26,.1); }
+  .legal summary { cursor: pointer; list-style: none; padding: 20px 0; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; display: flex; justify-content: space-between; align-items: center; }
+  .legal summary::-webkit-details-marker { display: none; }
+  .legal summary::after { content: "+"; font-size: 20px; color: var(--ink-soft); }
+  .legal details[open] summary::after { content: "\2212"; }
+  .legal .legal-body { padding: 4px 0 28px; font-size: 15px; color: var(--ink-soft); }
+  .legal .legal-body h4 { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.14em; font-size: 12.5px; color: var(--ink); margin: 20px 0 8px; }
+  .legal .legal-body p, .legal .legal-body li { margin-bottom: 10px; }
+  .legal .legal-body ul { padding-left: 20px; }
+  .legal .updated { font-size: 13px; color: var(--ink-soft); opacity: .8; margin-bottom: 14px; }
+
+  /* FOOTER */
+  footer { background: var(--cream); padding: 70px 0 40px; border-top: 1px solid rgba(26,26,26,.08); margin-top: 60px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
+  footer .word { font-size: 18px; letter-spacing: 0.24em; text-transform: uppercase; }
+  footer .tag { color: var(--ink-soft); margin-top: 12px; font-size: 15px; max-width: 30ch; }
+  .foot-col h4 { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.2em; font-size: 12px; color: var(--ink-soft); margin-bottom: 14px; }
+  .foot-col a { display: block; font-size: 15px; padding: 4px 0; color: var(--ink); transition: color .3s var(--ease); }
+  .foot-col a:hover { color: var(--red); }
+  .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(26,26,26,.08); display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
+
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .nav-links { gap: 18px; } .row2 { grid-template-columns: 1fr; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="word">Antoinette Jordaine <span class="brand-art">ARt</span></a>
+  <div class="nav-links">
+    <a href="index.html#work">Work</a>
+    <a href="about.html">About</a>
+    <a href="commissions.html">Commissions</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<main class="page">
+  <div class="wrap narrow">
+    <div class="stripe"></div>
+    <h1>Get in touch</h1>
+    <p class="lede">For commissions, collaborations and enquiries. Every project starts with a conversation, so tell Antoinette a little about yours.</p>
+
+    <!--
+      Form delivery: FormSubmit (formsubmit.co) forwards each submission to antoinettejordaine@gmail.com.
+      ACTIVATION: the first time the form is submitted, FormSubmit emails antoinettejordaine@gmail.com a
+      one-time confirmation link. Click it once to activate; after that, submissions arrive automatically.
+      At launch, update the _next URL below to the live domain's thank-you / home page.
+    -->
+    <form class="enquiry" action="https://formsubmit.co/antoinettejordaine@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New enquiry from antoinettejordaine.art" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://airf0rce1.github.io/antoinette-art-preview/index.html" />
+      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <div class="row2">
+        <div class="field">
+          <label for="first">First name</label>
+          <input id="first" type="text" name="First name" autocomplete="given-name" />
+        </div>
+        <div class="field">
+          <label for="last">Last name</label>
+          <input id="last" type="text" name="Last name" autocomplete="family-name" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input id="email" type="email" name="Email" required autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="Message" placeholder="Tell us about your project, space, or idea."></textarea>
+      </div>
+
+      <button class="submit" type="submit">Submit</button>
+    </form>
+
+    <!-- LEGAL -->
+    <div class="legal">
+      <details>
+        <summary>Privacy Policy</summary>
+        <div class="legal-body">
+          <p class="updated">Last updated: June 2026</p>
+          <p>This privacy policy explains how Antoinette Jordaine ("we", "us", the data controller) collects and uses your personal information when you contact us through this website. We are committed to protecting your privacy and handling your data in line with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+
+          <h4>What we collect</h4>
+          <p>When you complete the enquiry form we collect the information you provide: your first name, last name, email address, and the contents of your message. We do not collect special category data and we do not ask you to.</p>
+
+          <h4>How we use it</h4>
+          <p>We use this information solely to respond to your enquiry and to discuss a possible commission, collaboration or other request. Our lawful basis for processing is our legitimate interest in responding to messages sent to us, and, where relevant, taking steps at your request before entering into a contract.</p>
+
+          <h4>How your message reaches us</h4>
+          <p>The form is delivered to us by a third-party form provider (FormSubmit) and received in an email inbox provided by Google (Gmail). Your information is transmitted to these providers only to deliver your message. This website also loads fonts from Google Fonts, which may receive your IP address when a page loads.</p>
+
+          <h4>How long we keep it</h4>
+          <p>We keep enquiry correspondence for as long as is necessary to deal with your request and for our legitimate business records, after which it is deleted. If a commission or collaboration proceeds, related records may be kept for the period required by tax and accounting rules.</p>
+
+          <h4>Sharing</h4>
+          <p>We do not sell your data and we do not share it with third parties for marketing. We share it only with the service providers described above who help us operate the website and receive your message.</p>
+
+          <h4>Your rights</h4>
+          <p>Under UK data protection law you have the right to access the personal data we hold about you, to ask us to correct or delete it, to object to or restrict its processing, and to data portability. To exercise any of these rights, contact us through this form.</p>
+          <p>You also have the right to complain to the Information Commissioner's Office (ICO), the UK supervisory authority, at ico.org.uk.</p>
+
+          <h4>Cookies</h4>
+          <p>This website does not set its own tracking or advertising cookies. Third-party services used to display the site (such as Google Fonts) and to deliver the form may process limited technical data, such as your IP address, to function.</p>
+
+          <p>[TEMPLATE — please review and add your trading/business name, postal contact address, and ICO registration number if applicable before the site goes live. This is a standard template and not legal advice.]</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Terms &amp; Conditions</summary>
+        <div class="legal-body">
+          <p class="updated">Last updated: June 2026</p>
+          <p>These terms govern your use of this website. By accessing or using the site, you accept these terms in full.</p>
+
+          <h4>Content and intellectual property</h4>
+          <p>All artwork, images, designs, text and other content on this website are the property of Antoinette Jordaine and are protected by copyright and other intellectual property rights. You may not reproduce, copy, distribute, or use any content, including images of artwork, without our prior written permission.</p>
+
+          <h4>Enquiries and commissions</h4>
+          <p>Information on this website, including any indicative pricing, is provided for general guidance only and does not constitute a binding offer. Pricing for commissions and collaborations is confirmed in writing following an initial discussion. A commission is confirmed only once agreed in writing and any required deposit has been received.</p>
+
+          <h4>Accuracy</h4>
+          <p>We take care to keep the information on this website accurate and up to date, but we do not guarantee that it is complete or error free, and it may change without notice.</p>
+
+          <h4>External links</h4>
+          <p>This website may link to third-party sites, such as social media. We are not responsible for the content, policies or practices of those sites.</p>
+
+          <h4>Liability</h4>
+          <p>To the fullest extent permitted by law, we are not liable for any loss or damage arising from your use of, or inability to use, this website. Nothing in these terms limits liability that cannot be limited under applicable law.</p>
+
+          <h4>Governing law</h4>
+          <p>These terms are governed by the laws of England and Wales, and any disputes are subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+
+          <p>[TEMPLATE — please review and add your trading/business name and contact details before the site goes live. This is a standard template and not legal advice.]</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="word">Antoinette Jordaine <span class="brand-art">ARt</span></div>
+        <p class="tag">Pop art, mixed media and murals. Bold colour, geometric form, and words that affirm. London.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="commissions.html">Commissions</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="contact.html">Please contact the team</a>
+        <a href="https://instagram.com/antoinettejordaine.art" target="_blank" rel="noopener">@antoinettejordaine.art</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Antoinette Jordaine <span class="brand-art">ARt</span></span>
+      <span>London</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
