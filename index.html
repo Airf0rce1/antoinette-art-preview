@@ -171,9 +171,9 @@
   .sec-head p { margin-top: 16px; color: var(--ink-soft); font-size: 18px; }
 
   /* ============ WORK GALLERY ============ */
-  .gallery { columns: 3; column-gap: 22px; }
-  .card { break-inside: avoid; margin-bottom: 22px; position: relative; overflow: hidden; background: var(--grey); display: block; }
-  .card img { width: 100%; }
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .card { position: relative; overflow: hidden; background: var(--grey); display: block; aspect-ratio: 1 / 1; }
+  .card img { width: 100%; height: 100%; object-fit: cover; }
   .card .overlay {
     position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end;
     padding: 22px; color: #fff; opacity: 0; transition: opacity .45s var(--ease);
@@ -263,13 +263,13 @@
 
   /* ============ RESPONSIVE ============ */
   @media (max-width: 900px) {
-    .gallery { columns: 2; }
+    .gallery { grid-template-columns: repeat(2, 1fr); }
     .about-grid { grid-template-columns: 1fr; gap: 36px; }
     .foot-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
     body { font-size: 16px; }
-    .gallery { columns: 1; }
+    .gallery { grid-template-columns: 1fr; }
     .nav-links {
       position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 34px;
       background: var(--cream); transform: translateX(100%); transition: transform .5s var(--ease);
