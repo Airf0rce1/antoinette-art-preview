@@ -156,11 +156,8 @@
 
   /* ============ HERO ============ */
   .hero { position: relative; height: 100svh; min-height: 600px; display: flex; align-items: flex-end; }
-  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-  .hero::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(20,20,20,0.62) 0%, rgba(20,20,20,0.12) 42%, rgba(20,20,20,0.18) 100%);
-  }
+  .hero .hero-media { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+  @media (prefers-reduced-motion: reduce) { .hero-fx-spark, .hero-fx-shoot { display: none; } }
   .hero-inner { position: relative; z-index: 2; color: #fff; padding: 0 0 9vh; width: 100%; }
   .hero h1 { font-size: clamp(40px, 8.5vw, 104px); font-weight: 300; letter-spacing: 0.04em; }
   .hero .sub { font-family: 'Josefin Sans', sans-serif; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase; font-size: clamp(12px,1.6vw,15px); margin-top: 16px; opacity: .94; }
@@ -310,7 +307,64 @@
 
 <!-- ===================== HERO ===================== -->
 <header class="hero" id="top">
-  <img src="./img/you-are-magic.jpg" alt="You Are Magic, mural by Antoinette Jordaine" />
+  <svg class="hero-media" viewBox="0 0 1800 1350" preserveAspectRatio="xMidYMid slice" role="img" aria-label="You Are Magic, mural by Antoinette Jordaine" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <radialGradient id="spark" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#fffdf3" stop-opacity="0.95" />
+        <stop offset="38%" stop-color="#e9cf86" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#c9a84c" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient id="heroDark" x1="0" y1="0" x2="0" y2="1350" gradientUnits="userSpaceOnUse">
+        <stop offset="0" stop-color="#141414" stop-opacity="0.18" />
+        <stop offset="0.58" stop-color="#141414" stop-opacity="0.12" />
+        <stop offset="1" stop-color="#141414" stop-opacity="0.62" />
+      </linearGradient>
+      <linearGradient id="tail" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#fffdf3" stop-opacity="0" />
+        <stop offset="100%" stop-color="#fffdf3" stop-opacity="0.9" />
+      </linearGradient>
+      <path id="pathWave" d="M1210,560 C1120,680 1180,820 1030,910 S780,1030 640,1190" fill="none" />
+      <path id="pathStarTop" d="M470,760 C460,470 660,370 840,390 S1050,560 1045,720" fill="none" />
+      <path id="pathStarRight" d="M1045,700 C1055,810 1000,900 900,965 S760,1060 700,1150" fill="none" />
+      <path id="pathWater" d="M1500,1120 C1555,1085 1610,1155 1685,1112 S1780,1085 1795,1120" fill="none" />
+      <path id="pathSky" d="M1330,300 L1120,500" fill="none" />
+      <g id="sprite">
+        <circle r="11" fill="url(#spark)" />
+        <path d="M0,-12 C1.4,-3.6 3.6,-1.4 12,0 C3.6,1.4 1.4,3.6 0,12 C-1.4,3.6 -3.6,1.4 -12,0 C-3.6,-1.4 -1.4,-3.6 0,-12 Z" fill="#fffdf3">
+          <animateTransform attributeName="transform" type="scale" values="0.45;1;0.45" dur="1.7s" repeatCount="indefinite" />
+        </path>
+      </g>
+      <g id="shoot">
+        <path d="M-80,0 L0,0" stroke="url(#tail)" stroke-width="3.2" stroke-linecap="round" fill="none" />
+        <circle r="7" fill="url(#spark)" />
+        <path d="M0,-9 C1,-2.7 2.7,-1 9,0 C2.7,1 1,2.7 0,9 C-1,2.7 -2.7,1 -9,0 C-2.7,-1 -1,-2.7 0,-9 Z" fill="#fffdf3" />
+      </g>
+    </defs>
+
+    <image href="./img/you-are-magic.jpg" xlink:href="./img/you-are-magic.jpg" x="0" y="0" width="1800" height="1350" preserveAspectRatio="xMidYMid slice" />
+    <rect x="0" y="0" width="1800" height="1350" fill="url(#heroDark)" />
+
+    <use href="#sprite" class="hero-fx-spark" opacity="0">
+      <animateMotion dur="12s" begin="0s" repeatCount="indefinite" rotate="0"><mpath href="#pathWave" /></animateMotion>
+      <animate attributeName="opacity" dur="12s" begin="0s" repeatCount="indefinite" values="0;0.8;0.8;0;0" keyTimes="0;0.12;0.42;0.55;1" />
+    </use>
+    <use href="#sprite" class="hero-fx-spark" opacity="0">
+      <animateMotion dur="14s" begin="4s" repeatCount="indefinite" rotate="0"><mpath href="#pathStarTop" /></animateMotion>
+      <animate attributeName="opacity" dur="14s" begin="4s" repeatCount="indefinite" values="0;0.72;0.72;0;0" keyTimes="0;0.12;0.45;0.58;1" />
+    </use>
+    <use href="#sprite" class="hero-fx-spark" opacity="0">
+      <animateMotion dur="11s" begin="8s" repeatCount="indefinite" rotate="0"><mpath href="#pathStarRight" /></animateMotion>
+      <animate attributeName="opacity" dur="11s" begin="8s" repeatCount="indefinite" values="0;0.75;0.75;0;0" keyTimes="0;0.14;0.5;0.62;1" />
+    </use>
+    <use href="#sprite" class="hero-fx-spark" opacity="0">
+      <animateMotion dur="13s" begin="6s" repeatCount="indefinite" rotate="0"><mpath href="#pathWater" /></animateMotion>
+      <animate attributeName="opacity" dur="13s" begin="6s" repeatCount="indefinite" values="0;0.6;0.6;0;0" keyTimes="0;0.12;0.42;0.55;1" />
+    </use>
+    <use href="#shoot" class="hero-fx-shoot" opacity="0">
+      <animateMotion dur="15s" begin="3s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.1;1" calcMode="linear"><mpath href="#pathSky" /></animateMotion>
+      <animate attributeName="opacity" dur="15s" begin="3s" repeatCount="indefinite" values="0;0.9;0.9;0;0" keyTimes="0;0.02;0.08;0.11;1" />
+    </use>
+  </svg>
   <div class="wrap hero-inner">
     <h1>Antoinette Jordaine <span class="brand-art">ARt</span></h1>
     <div class="sub">Artist &middot; London</div>
