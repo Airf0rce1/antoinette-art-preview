@@ -156,8 +156,11 @@
 
   /* ============ HERO ============ */
   .hero { position: relative; height: 100svh; min-height: 600px; display: flex; align-items: flex-end; }
-  .hero .hero-media { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-  @media (prefers-reduced-motion: reduce) { .hero-fx-spark, .hero-fx-shoot { display: none; } }
+  .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(20,20,20,0.62) 0%, rgba(20,20,20,0.12) 42%, rgba(20,20,20,0.18) 100%);
+  }
   .hero-inner { position: relative; z-index: 2; color: #fff; padding: 0 0 9vh; width: 100%; }
   .hero h1 { font-size: clamp(40px, 8.5vw, 104px); font-weight: 300; letter-spacing: 0.04em; }
   .hero .sub { font-family: 'Josefin Sans', sans-serif; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase; font-size: clamp(12px,1.6vw,15px); margin-top: 16px; opacity: .94; }
@@ -307,61 +310,7 @@
 
 <!-- ===================== HERO ===================== -->
 <header class="hero" id="top">
-  <svg class="hero-media" viewBox="0 0 1800 1350" preserveAspectRatio="xMidYMid slice" role="img" aria-label="You Are Magic, mural by Antoinette Jordaine" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-      <radialGradient id="spark" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#fffef8" stop-opacity="1" />
-        <stop offset="42%" stop-color="#f4d778" stop-opacity="0.65" />
-        <stop offset="100%" stop-color="#e9c766" stop-opacity="0" />
-      </radialGradient>
-      <linearGradient id="heroDark" x1="0" y1="0" x2="0" y2="1350" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#141414" stop-opacity="0.18" />
-        <stop offset="0.58" stop-color="#141414" stop-opacity="0.12" />
-        <stop offset="1" stop-color="#141414" stop-opacity="0.62" />
-      </linearGradient>
-      <linearGradient id="cometTail" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0" stop-color="#f4d778" stop-opacity="0" />
-        <stop offset="0.62" stop-color="#f6de92" stop-opacity="0.32" />
-        <stop offset="1" stop-color="#fffef8" stop-opacity="0.92" />
-      </linearGradient>
-      <!-- straight shooting-star routes along the gold starburst rays -->
-      <path id="ray1" d="M690,670 L498,476" fill="none" />
-      <path id="ray2" d="M745,700 L735,372" fill="none" />
-      <path id="ray3" d="M795,675 L962,448" fill="none" />
-      <path id="ray4" d="M815,780 L1018,905" fill="none" />
-      <path id="ray5" d="M728,835 L700,1155" fill="none" />
-      <g id="comet">
-        <path d="M0,-3.4 Q-46,-1.5 -96,0 Q-46,1.5 0,3.4 Z" fill="url(#cometTail)" />
-        <circle r="7" fill="url(#spark)" />
-        <circle r="2.4" fill="#fffef8" />
-      </g>
-    </defs>
-
-    <image href="./img/you-are-magic.jpg" xlink:href="./img/you-are-magic.jpg" x="0" y="0" width="1800" height="1350" preserveAspectRatio="xMidYMid slice" />
-    <rect x="0" y="0" width="1800" height="1350" fill="url(#heroDark)" />
-
-    <!-- one shooting star at a time: staggered so visible windows never overlap -->
-    <use href="#comet" class="hero-fx-shoot" opacity="0">
-      <animateMotion dur="15s" begin="0s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.078;1" calcMode="linear"><mpath href="#ray1" /></animateMotion>
-      <animate attributeName="opacity" dur="15s" begin="0s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.006;0.06;0.078;1" />
-    </use>
-    <use href="#comet" class="hero-fx-shoot" opacity="0">
-      <animateMotion dur="15s" begin="3s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.072;1" calcMode="linear"><mpath href="#ray2" /></animateMotion>
-      <animate attributeName="opacity" dur="15s" begin="3s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.006;0.055;0.072;1" />
-    </use>
-    <use href="#comet" class="hero-fx-shoot" opacity="0">
-      <animateMotion dur="15s" begin="6s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.084;1" calcMode="linear"><mpath href="#ray3" /></animateMotion>
-      <animate attributeName="opacity" dur="15s" begin="6s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.006;0.066;0.084;1" />
-    </use>
-    <use href="#comet" class="hero-fx-shoot" opacity="0">
-      <animateMotion dur="15s" begin="9s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.076;1" calcMode="linear"><mpath href="#ray4" /></animateMotion>
-      <animate attributeName="opacity" dur="15s" begin="9s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.006;0.058;0.076;1" />
-    </use>
-    <use href="#comet" class="hero-fx-shoot" opacity="0">
-      <animateMotion dur="15s" begin="12s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;0.08;1" calcMode="linear"><mpath href="#ray5" /></animateMotion>
-      <animate attributeName="opacity" dur="15s" begin="12s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.006;0.062;0.08;1" />
-    </use>
-  </svg>
+  <img src="./img/you-are-magic.jpg" alt="You Are Magic, mural by Antoinette Jordaine" />
   <div class="wrap hero-inner">
     <h1>Antoinette Jordaine <span class="brand-art">ARt</span></h1>
     <div class="sub">Artist &middot; London</div>
