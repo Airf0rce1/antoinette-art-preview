@@ -3,31 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Commissions and Collaborations, Antoinette Jordaine ARt</title>
-<meta name="description" content="Commission site-specific murals, installations, bespoke artworks and wearable art by London artist Antoinette Jordaine. Brand and creative collaborations welcome." />
+<title>Gallery, Antoinette Jordaine ARt</title>
+<meta name="description" content="The gallery of Antoinette Jordaine: murals, canvases, wearable art and mixed media in bold colour. More work coming soon." />
 <meta name="robots" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
 <meta name="googlebot" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
-<link rel="canonical" href="https://antoinettejordaine.com/commissions.html" />
+<link rel="canonical" href="https://antoinettejordaine.com/gallery.html" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Antoinette Jordaine ARt" />
 <meta property="og:locale" content="en_GB" />
-<meta property="og:url" content="https://antoinettejordaine.com/commissions.html" />
-<meta property="og:title" content="Commissions and Collaborations, Antoinette Jordaine ARt" />
-<meta property="og:description" content="Site-specific murals, installations, bespoke artworks and wearable art. Every project starts with a conversation." />
-<meta property="og:image" content="https://antoinettejordaine.com/img/commissions-portrait.jpg" />
+<meta property="og:url" content="https://antoinettejordaine.com/gallery.html" />
+<meta property="og:title" content="Gallery, Antoinette Jordaine ARt" />
+<meta property="og:description" content="Murals, canvases, wearable art and mixed media in bold colour, by London artist Antoinette Jordaine." />
+<meta property="og:image" content="https://antoinettejordaine.com/img/wanderlust.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Commissions and Collaborations, Antoinette Jordaine ARt" />
-<meta name="twitter:image" content="https://antoinettejordaine.com/img/commissions-portrait.jpg" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Art commissions and collaborations",
-  "provider": { "@type": "Person", "name": "Antoinette Jordaine", "url": "https://antoinettejordaine.com/" },
-  "areaServed": { "@type": "Country", "name": "United Kingdom" },
-  "description": "Site-specific murals, interior installations, bespoke artworks and wearable art for homes, businesses and public spaces."
-}
-</script>
+<meta name="twitter:title" content="Gallery, Antoinette Jordaine ARt" />
+<meta name="twitter:image" content="https://antoinettejordaine.com/img/wanderlust.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Hanken+Grotesk:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
@@ -43,9 +33,9 @@
   img { display: block; max-width: 100%; height: auto; }
   a { color: inherit; text-decoration: none; }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
-  .narrow { max-width: 760px; }
   h1, h2, h3, .word { font-family: 'Josefin Sans', sans-serif; font-weight: 300; letter-spacing: 0.02em; line-height: 1.12; }
   .eyebrow { font-family: 'Josefin Sans', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.32em; font-size: 12px; color: var(--ink-soft); }
+  .serif { font-family: 'Cormorant Garamond', serif; font-style: italic; }
   .brand-art { text-transform: none; }
   .stripe { height: 6px; width: 66px; background-image: radial-gradient(circle, var(--ink) 0 2.5px, transparent 3px); background-size: 12px 6px; background-repeat: repeat-x; background-position: left center; margin-bottom: 26px; }
 
@@ -58,25 +48,25 @@
   .nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
 
   /* PAGE */
-  .page { padding: 150px 0 60px; }
-  .page h1 { font-size: clamp(34px, 5vw, 60px); margin-bottom: 18px; }
-  .lede { color: var(--ink-soft); font-size: 19px; max-width: 60ch; }
+  .page { padding: 150px 0 100px; }
+  .gallery-head { max-width: 640px; margin-bottom: 56px; }
+  .gallery-head h1 { font-size: clamp(34px, 5vw, 60px); margin-bottom: 16px; }
+  .gallery-head p { color: var(--ink-soft); font-size: 18px; }
 
-  .block { margin-top: 64px; }
-  .block h2 { font-size: clamp(24px, 3.2vw, 36px); margin-bottom: 22px; }
-  .block p { margin-bottom: 20px; color: var(--ink-soft); }
-  .block p:first-of-type { color: var(--ink); }
+  .grid { columns: 3; column-gap: 22px; }
+  .card { break-inside: avoid; margin-bottom: 22px; position: relative; overflow: hidden; background: var(--grey); display: block; }
+  .card img { width: 100%; }
+  .card .overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; color: #fff; opacity: 0; transition: opacity .45s var(--ease); background: linear-gradient(to top, rgba(20,20,20,0.74), rgba(20,20,20,0) 62%); }
+  .card:hover .overlay, .card:focus-visible .overlay { opacity: 1; }
+  .card .overlay .t { font-family: 'Josefin Sans', sans-serif; font-weight: 400; letter-spacing: 0.08em; font-size: 19px; }
+  .card .overlay .m { font-size: 13.5px; letter-spacing: 0.04em; opacity: .9; margin-top: 4px; }
 
-  /* studio image */
-  .image-slot { margin: 64px 0; text-align: center; }
-  .image-slot img { display: inline-block; width: auto; max-width: 100%; max-height: 600px; }
-
-  .cta-row { margin-top: 56px; }
-  .link-cta { display: inline-flex; align-items: center; gap: 9px; font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.18em; text-transform: uppercase; font-size: 12.5px; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 5px; transition: gap .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease); }
-  .link-cta:hover { gap: 16px; color: var(--red); border-color: var(--red); }
+  .more { text-align: center; margin-top: 64px; padding: 46px 0; border-top: 1px solid rgba(26,26,26,.08); }
+  .more .serif { font-size: clamp(20px, 3vw, 28px); color: var(--ink-soft); }
+  .more .eyebrow { margin-top: 16px; }
 
   /* FOOTER */
-  footer { background: var(--cream); padding: 70px 0 40px; border-top: 1px solid rgba(26,26,26,.08); margin-top: 40px; }
+  footer { background: var(--cream); padding: 70px 0 40px; border-top: 1px solid rgba(26,26,26,.08); }
   .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
   footer .word { font-size: 18px; letter-spacing: 0.24em; text-transform: uppercase; }
   footer .tag { color: var(--ink-soft); margin-top: 12px; font-size: 15px; max-width: 30ch; }
@@ -86,8 +76,8 @@
   .ig-icon { width: 14px; height: 14px; vertical-align: -2px; margin-right: 7px; }
   .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(26,26,26,.08); display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
 
-  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { body { font-size: 16px; } .nav-links { gap: 18px; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
+  @media (max-width: 900px) { .grid { columns: 2; } .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .grid { columns: 1; } .nav-links { gap: 18px; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
 </style>
 </head>
 <body>
@@ -105,27 +95,43 @@
 
 <!-- PAGE -->
 <main class="page">
-  <div class="wrap narrow">
-    <div class="stripe"></div>
-    <h1>Commissions and Collaborations</h1>
-    <p class="lede">Every project starts with a conversation.</p>
+  <div class="wrap">
+    <div class="gallery-head">
+      <div class="stripe"></div>
+      <h1>Gallery</h1>
+      <p>A growing collection of work by Antoinette Jordaine. Murals, canvases, wearable art and mixed media, in bold colour and words that affirm.</p>
+    </div>
 
-    <figure class="image-slot"><img src="./img/commissions-portrait.jpg" alt="Antoinette Jordaine in her studio, holding a paintbrush" /></figure>
+    <div class="grid">
+      <a class="card" href="commissions.html">
+        <img src="./img/wanderlust.jpg" alt="Wanderlust, pop art canvas of London landmarks by Antoinette Jordaine" />
+        <div class="overlay"><span class="t">Wanderlust</span><span class="m">Pop art canvas &middot; mixed media</span></div>
+      </a>
+      <a class="card" href="commissions.html">
+        <img src="./img/do-you-darling.jpg" alt="Do You Darling, hand-painted suede coat by Antoinette Jordaine" />
+        <div class="overlay"><span class="t">Do You Darling</span><span class="m">Wearable art &middot; hand-painted coat</span></div>
+      </a>
+      <a class="card" href="commissions.html">
+        <img src="./img/painted-palladiums.jpg" alt="Hand-painted canvas boots by Antoinette Jordaine" />
+        <div class="overlay"><span class="t">Painted Palladiums</span><span class="m">Wearable art &middot; hand-painted boots</span></div>
+      </a>
+      <a class="card" href="commissions.html">
+        <img src="./img/body-series.jpg" alt="Body Series, acrylic, gold leaf and Swarovski crystals" />
+        <div class="overlay"><span class="t">Body Series</span><span class="m">Acrylic, gold leaf &amp; Swarovski crystals &middot; 2025</span></div>
+      </a>
+      <a class="card" href="commissions.html">
+        <img src="./img/you-have-got-this.jpg" alt="YOU HAVE GOT THIS, street mural by Antoinette Jordaine" />
+        <div class="overlay"><span class="t">You Have Got This</span><span class="m">Street mural</span></div>
+      </a>
+      <a class="card" href="commissions.html">
+        <img src="./img/encona.jpg" alt="Encona Hot Pepper Sauce, pop art painting by Antoinette Jordaine, 2016" />
+        <div class="overlay"><span class="t">Encona</span><span class="m">Pop art painting &middot; 2016</span></div>
+      </a>
+    </div>
 
-    <section class="block">
-      <h2>Commissions</h2>
-      <p>Antoinette Jordaine creates site-specific murals, interior installations, and bespoke artworks for homes, businesses, and public spaces, as well as wearable art across clothing, accessories, and homeware. Every commission begins with a conversation, allowing the vision, space, and purpose behind the piece to shape the final outcome.</p>
-      <p>As a guide, public site-specific murals start from &pound;3,500 + VAT, private and residential murals from &pound;3,000 + VAT, and canvas or paper works from A2 size and above start from &pound;2,200 + VAT. Final pricing is dependent on scale, location, materials, timeframe, and complexity, and is confirmed following an initial discussion to fully understand the scope of the project.</p>
-      <p>A 50% deposit is required to confirm and commence each commission, with the remaining balance due upon completion. This secures your place in Antoinette Jordaine's schedule and allows work to begin with full commitment from both sides.</p>
-    </section>
-
-    <section class="block">
-      <h2>Collaborations</h2>
-      <p>Antoinette Jordaine is always open to hearing about brand and collaborative projects that align with her values and creative vision. While her standard pricing reflects the time, scale, and craftsmanship behind each piece, she's happy to discuss bespoke arrangements for the right collaboration.</p>
-    </section>
-
-    <div class="cta-row">
-      <a class="link-cta" href="contact.html">Start a conversation &rarr;</a>
+    <div class="more">
+      <p class="serif">More work is on its way.</p>
+      <div class="eyebrow">New pieces added as they leave the studio</div>
     </div>
   </div>
 </main>
