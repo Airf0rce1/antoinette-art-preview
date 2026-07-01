@@ -58,8 +58,8 @@
   .nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
 
   /* brand logo lockup (nav + footer) */
-  .brand-lockup { display: inline-flex; flex-direction: row; align-items: center; gap: 11px; }
-  .brand-logo { height: 24px; width: auto; display: block; }
+  .brand-lockup { display: inline-block; }
+  .brand-logo { height: 22px; width: auto; display: inline-block; vertical-align: middle; margin-left: 11px; }
   .foot-logo { height: 58px; width: auto; display: block; margin-bottom: 18px; }
 
   /* PAGE */
@@ -100,8 +100,7 @@
 <!-- NAV -->
 <nav class="nav">
   <a href="index.html" class="brand-lockup">
-    <span class="word">Antoinette Jordaine <span class="brand-art">ARt</span></span>
-    <img class="brand-logo brand-logo--dark" src="./img/logo-mark.png" alt="" aria-hidden="true" />
+    <span class="word">Antoinette Jordaine <span class="brand-art">ARt</span><img class="brand-logo brand-logo--dark" src="./img/logo-mark.png" alt="" aria-hidden="true" /></span>
   </a>
   <div class="nav-links">
     <a href="index.html#work">Work</a>
