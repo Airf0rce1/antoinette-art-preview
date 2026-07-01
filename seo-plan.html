@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Getting You Found, Antoinette Jordaine ARt</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="googlebot" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Hanken+Grotesk:wght@300;400;500&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --cream:#FAFAF7; --ink:#1A1A1A; --ink-soft:#4A4A46;
+    --red:#E53935; --blue:#1565C0; --yellow:#FDD835; --gold:#C9A84C; --grey:#F0F0EC;
+    --maxw:1080px; --ease:cubic-bezier(0.22,1,0.36,1);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { -webkit-font-smoothing:antialiased; }
+  body { background:var(--cream); color:var(--ink); font-family:'Hanken Grotesk',system-ui,sans-serif; font-weight:400; font-size:16.5px; line-height:1.62; }
+  .wrap { max-width:var(--maxw); margin:0 auto; padding:0 26px; }
+  h1,h2,h3,.word { font-family:'Josefin Sans',sans-serif; font-weight:300; letter-spacing:0.02em; line-height:1.14; }
+  .brand-art { text-transform:none; }
+  .serif { font-family:'Cormorant Garamond',serif; font-style:italic; }
+  .word { font-weight:400; }
+
+  header.hero { text-align:center; padding:74px 0 20px; }
+  .hero .word { font-size:14px; letter-spacing:0.26em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:22px; }
+  .hero h1 { font-size:clamp(34px,6vw,60px); margin-bottom:16px; }
+  .hero .serif { font-size:clamp(18px,2.5vw,25px); color:var(--ink-soft); max-width:34ch; margin:0 auto; }
+  .dots { height:7px; width:74px; margin:26px auto 0; background-image:radial-gradient(circle,var(--ink) 0 2.5px,transparent 3px); background-size:13px 7px; background-repeat:repeat-x; background-position:center; }
+
+  section.block { padding:34px 0; }
+  .kicker { font-family:'Josefin Sans',sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:0.2em; font-size:12px; color:var(--ink-soft); margin-bottom:12px; }
+  .block h2 { font-size:clamp(23px,3.2vw,34px); margin-bottom:14px; }
+  .block > .wrap > p { color:var(--ink-soft); max-width:62ch; }
+  .lead-serif { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:20px; color:var(--ink); }
+
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:22px; }
+  .card { background:#fff; border:1px solid rgba(26,26,26,0.08); border-top:3px solid var(--blue); padding:22px; }
+  .card h3 { font-size:18px; margin-bottom:8px; }
+  .card p { color:var(--ink-soft); font-size:14.5px; }
+  .c-name { border-top-color:var(--red); }
+  .c-make { border-top-color:var(--yellow); }
+  .c-book { border-top-color:var(--blue); }
+
+  .done { list-style:none; margin-top:22px; display:grid; gap:12px; }
+  .done li { background:#fff; border:1px solid rgba(26,26,26,0.08); padding:16px 18px 16px 46px; position:relative; font-size:15px; color:var(--ink-soft); }
+  .done li::before { content:"\2713"; position:absolute; left:16px; top:16px; width:20px; height:20px; border-radius:50%; background:var(--blue); color:#fff; font-size:12px; display:flex; align-items:center; justify-content:center; }
+  .done li b { color:var(--ink); font-weight:500; }
+
+  .you { background:#111; color:var(--cream); margin-top:16px; padding:54px 0 58px; }
+  .you .kicker { color:var(--yellow); }
+  .you h2 { color:#fff; font-size:clamp(23px,3.2vw,34px); margin-bottom:8px; }
+  .you .intro { color:rgba(250,250,247,0.72); max-width:56ch; margin-bottom:32px; font-size:15px; }
+  .asks { display:grid; gap:16px; }
+  .ask { border:1px solid rgba(250,250,247,0.16); padding:22px; }
+  .ask.big { border-color:var(--yellow); background:rgba(253,216,53,0.06); }
+  .ask .h { font-family:'Josefin Sans',sans-serif; font-size:17px; letter-spacing:0.04em; color:#fff; margin-bottom:7px; }
+  .ask .tag { font-family:'Josefin Sans',sans-serif; text-transform:uppercase; letter-spacing:0.14em; font-size:10px; color:#111; background:var(--yellow); padding:2px 8px; border-radius:20px; margin-left:8px; vertical-align:middle; }
+  .ask p { color:rgba(250,250,247,0.8); font-size:14.5px; }
+  .ask p b { color:#fff; font-weight:500; }
+
+  .expect { padding:52px 0 30px; }
+  .expect .box { background:var(--grey); border-left:4px solid var(--gold); padding:26px 28px; max-width:64ch; }
+  .expect .box h2 { font-size:clamp(21px,2.8vw,28px); margin-bottom:14px; }
+  .expect ul { list-style:none; display:grid; gap:12px; }
+  .expect li { position:relative; padding-left:22px; color:var(--ink-soft); font-size:15px; }
+  .expect li::before { content:""; position:absolute; left:0; top:9px; width:8px; height:8px; border-radius:50%; background:var(--gold); }
+  .expect li b { color:var(--ink); font-weight:500; }
+
+  footer { text-align:center; padding:46px 0 56px; }
+  footer .serif { font-size:21px; color:var(--ink-soft); }
+  footer .word { display:block; margin-top:16px; font-size:13px; letter-spacing:0.24em; text-transform:uppercase; color:var(--ink); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="word">Antoinette Jordaine <span class="brand-art">ARt</span></div>
+    <h1>Getting You Found</h1>
+    <p class="serif">A simple plan for how the right people find you online, and the few things I will need from you.</p>
+    <div class="dots"></div>
+  </div>
+</header>
+
+<main>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker">First, in plain English</div>
+      <h2>What "SEO" actually means</h2>
+      <p><span class="lead-serif">SEO is just a fancy word for helping the right people find you when they search online.</span></p>
+      <p style="margin-top:14px;">Someone types your name, or "affirmation artist London", or "mural for my cafe", and we want your website to be there to meet them. Here is how we make that happen, and it is more straightforward than it sounds.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker">The goal</div>
+      <h2>What we want you found for</h2>
+      <div class="cards">
+        <div class="card c-name"><h3>Your name</h3><p>Antoinette Jordaine, your art, your studio. The easiest win, and it lands quickly once the site is live.</p></div>
+        <div class="card c-make"><h3>What you make</h3><p>Affirmation art, murals, wearable art, mixed media, and London. So people who love the style discover you.</p></div>
+        <div class="card c-book"><h3>Ready to commission</h3><p>Searches like "mural commission London" or "commission an artist". The people most likely to actually book you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="kicker">Already done</div>
+      <h2>What is already built into your site</h2>
+      <p>You do not need to lift a finger for any of this. It is quietly in place, waiting for launch day.</p>
+      <ul class="done">
+        <li><b>Your site introduces you to Google as a London artist</b>, in a language Google understands, so you can appear as a real person and practice, not just a web page.</li>
+        <li><b>Every page has a clear title and description</b>, the exact words people read in their search results.</li>
+        <li><b>Share a link anywhere</b> (Instagram, WhatsApp, email) and it shows a proper preview with your art, never a bare link.</li>
+        <li><b>A map of your whole site</b> so Google can find every page the moment we go live.</li>
+        <li><b>Fast, mobile-friendly, accessible pages</b>, which Google quietly rewards with better visibility.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="you">
+    <div class="wrap">
+      <div class="kicker">Over to you</div>
+      <h2>The bit that needs you</h2>
+      <p class="intro">Three things move the needle far more than anything technical. None of them are hard, and I will do the heavy lifting on each.</p>
+      <div class="asks">
+        <div class="ask big"><div class="h">Your Google listing<span class="tag">Biggest win</span></div><p>A free Google Business Profile, so you show up on Google and Maps when someone searches your name or "artist near me". <b>I set it up.</b> You just tell me your studio area, a short line about what you do, and a few favourite photos.</p></div>
+        <div class="ask"><div class="h">The words people would use</div><p>A quick sanity check from you on how people actually describe what you do, so we aim at the right searches rather than guessing.</p></div>
+        <div class="ask"><div class="h">Links from others</div><p>Over time, mentions from galleries, press, exhibition listings, and your Instagram bio, all linking back to your site. These build Google's trust in you. <b>I keep the list.</b> You point me to any you already have.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="expect">
+    <div class="wrap">
+      <div class="box">
+        <h2>Honest expectations</h2>
+        <ul>
+          <li><b>Your name</b> will start showing up soon after launch.</li>
+          <li><b>The bigger searches</b> (murals, commissions, London) are a slow build over weeks and months, and they lean heavily on your Google listing and links.</li>
+          <li><b>This is a garden, not a switch.</b> We plant now, and it grows steadily. No overnight magic, but real and lasting.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="serif">Found by the people who are looking for you.</p>
+    <span class="word">Antoinette Jordaine <span class="brand-art">ARt</span></span>
+  </div>
+</footer>
+
+</body>
+</html>
