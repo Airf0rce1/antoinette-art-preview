@@ -101,7 +101,7 @@
   .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(26,26,26,.08); display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
 
   @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { body { font-size: 16px; } .nav-links { position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 34px; background: var(--cream); transform: translateX(100%); transition: transform .5s var(--ease); } .nav-links.open { transform: none; } .nav-links a { font-size: 20px; } .menu-btn { display: block; } .row2 { grid-template-columns: 1fr; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .nav-links { position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 34px; background: var(--cream); transform: translateX(100%); transition: transform .5s var(--ease); } .nav-links.open { transform: none; } .nav-links a { font-size: 20px; } .menu-btn { display: block; } .nav { -webkit-backdrop-filter: none; backdrop-filter: none; } .row2 { grid-template-columns: 1fr; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
 </style>
 </head>
 <body>
