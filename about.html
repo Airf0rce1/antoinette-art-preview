@@ -67,6 +67,11 @@
   .nav-links a::after { content: ""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0; background: var(--gold); transition: width .35s var(--ease); }
   .nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
 
+  /* brand logo lockup (nav + footer) */
+  .brand-lockup { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .brand-logo { height: 24px; width: auto; display: block; }
+  .foot-logo { height: 58px; width: auto; display: block; margin-bottom: 18px; }
+
   /* PAGE */
   .page { padding: 150px 0 100px; }
   .about-layout { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: start; }
@@ -98,7 +103,10 @@
 
 <!-- NAV -->
 <nav class="nav">
-  <a href="index.html" class="word">Antoinette Jordaine <span class="brand-art">ARt</span></a>
+  <a href="index.html" class="brand-lockup">
+    <span class="word">Antoinette Jordaine <span class="brand-art">ARt</span></span>
+    <img class="brand-logo brand-logo--dark" src="./img/logo-mark.png" alt="" aria-hidden="true" />
+  </a>
   <div class="nav-links">
     <a href="index.html#work">Work</a>
     <a href="about.html">About</a>
@@ -130,6 +138,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
+        <img class="foot-logo" src="./img/logo-mark.png" alt="" aria-hidden="true" />
         <div class="word">Antoinette Jordaine <span class="brand-art">ARt</span></div>
         <p class="tag">Multidisciplinary art, mixed media and murals. Bold colour, geometric form, and words that affirm.</p>
       </div>

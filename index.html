@@ -149,6 +149,14 @@
     background: var(--gold); transition: width .35s var(--ease);
   }
   .nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
+
+  /* brand logo lockup (nav + footer) */
+  .brand-lockup { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+  .brand-logo { height: 24px; width: auto; display: block; }
+  .foot-logo { height: 58px; width: auto; display: block; margin-bottom: 18px; }
+  .brand-logo--dark { display: none; }
+  .nav.scrolled .brand-logo--light { display: none; }
+  .nav.scrolled .brand-logo--dark { display: block; }
   .menu-btn { display: none; background: none; border: 0; cursor: pointer; width: 30px; height: 22px; position: relative; }
   .menu-btn span { position: absolute; left: 0; height: 2px; width: 100%; background: #fff; transition: .4s var(--ease); }
   .nav.scrolled .menu-btn span { background: var(--ink); }
@@ -296,7 +304,11 @@
 
 <!-- ===================== NAV ===================== -->
 <nav class="nav" id="nav">
-  <a href="#top" class="word">Antoinette Jordaine <span class="brand-art">ARt</span></a>
+  <a href="#top" class="brand-lockup">
+    <span class="word">Antoinette Jordaine <span class="brand-art">ARt</span></span>
+    <img class="brand-logo brand-logo--light" src="./img/logo-mark-white.png" alt="" aria-hidden="true" />
+    <img class="brand-logo brand-logo--dark" src="./img/logo-mark.png" alt="" aria-hidden="true" />
+  </a>
   <div class="nav-links" id="navLinks">
     <a href="#work">Work</a>
     <a href="#about">About</a>
@@ -363,13 +375,23 @@
   <div class="stripe-band"></div>
   <div class="wrap reveal">
     <div class="quote-rotator" id="quoteRotator">
-      <p class="quote active">You are enough, you are loved, <em>you are more.</em></p>
-      <p class="quote">Oh darling, <em>I just love you.</em></p>
-      <p class="quote">Speak it into existence. <em>It really does work.</em></p>
-      <p class="quote">In all things, <em>be kind.</em></p>
-      <p class="quote">Whatever comes, <em>you have got this.</em></p>
-      <p class="quote">Stay grounded, <em>find peace.</em></p>
-      <p class="quote">All will be <em>ok in the end.</em></p>
+      <p class="quote active">Society may predict, but only I can determine my destiny.</p>
+      <p class="quote">Be kind, always</p>
+      <p class="quote">I love you today more than yesterday, but not as much as tomorrow.</p>
+      <p class="quote">Bad news travels fast. Good news takes the scenic route</p>
+      <p class="quote">You are never to old to learn that it's never to old to learn</p>
+      <p class="quote">Karma will always prevail</p>
+      <p class="quote">Let them</p>
+      <p class="quote">Loving yourself first is the best thing you can do for others</p>
+      <p class="quote">Kindness is a language which the deaf can hear and the blind can see</p>
+      <p class="quote">Now is when it is, here is where it is, you are what it is</p>
+      <p class="quote">The only thing you can control is how you react to things out of your control</p>
+      <p class="quote">Remember that happiness starts with you</p>
+      <p class="quote">Time is precious, waste it wisely</p>
+      <p class="quote">Success unshared is failure</p>
+      <p class="quote">A room without books is like a body without a soul</p>
+      <p class="quote">Those who cannot change their mindset, cannot change any thing</p>
+      <p class="quote">Don't count the days, make the days count</p>
     </div>
     <span class="by">Affirm</span>
   </div>
@@ -431,6 +453,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
+        <img class="foot-logo" src="./img/logo-mark.png" alt="" aria-hidden="true" />
         <div class="word">Antoinette Jordaine <span class="brand-art">ARt</span></div>
         <p class="tag">Multidisciplinary art, mixed media and murals. Bold colour, geometric form, and words that affirm.</p>
       </div>
@@ -494,7 +517,7 @@
     var themes = [
       { bg: '#1A1A1A', fg: '#FAFAF7', accent: '#FFE066', by: '#FAFAF7' },
       { bg: '#1565C0', fg: '#FAFAF7', accent: '#FFE066', by: '#FAFAF7' },
-      { bg: '#FFE84D', fg: '#FAFAF7', accent: '#1565C0', by: '#1A1A1A' },
+      { bg: '#FFE84D', fg: '#1A1A1A', accent: '#1565C0', by: '#1A1A1A' },
       { bg: '#E53935', fg: '#FAFAF7', accent: '#FFE066', by: '#FAFAF7' }
     ];
     function applyTheme(n) {
