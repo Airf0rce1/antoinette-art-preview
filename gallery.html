@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Gallery, Antoinette Jordaine ARt</title>
-<meta name="description" content="The gallery of Antoinette Jordaine: murals, canvases, wearable art and mixed media in bold colour. More work coming soon." />
+<meta name="description" content="The gallery of Antoinette Jordaine: murals, canvases, wearable art, homeware and mixed media in bold colour. Click any piece to view." />
 <meta name="robots" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
 <meta name="googlebot" content="noindex, nofollow" /><!-- DRAFT: remove at launch -->
 <link rel="canonical" href="https://antoinettejordaine.com/gallery.html" />
@@ -13,7 +13,7 @@
 <meta property="og:locale" content="en_GB" />
 <meta property="og:url" content="https://antoinettejordaine.com/gallery.html" />
 <meta property="og:title" content="Gallery, Antoinette Jordaine ARt" />
-<meta property="og:description" content="Murals, canvases, wearable art and mixed media in bold colour, by London artist Antoinette Jordaine." />
+<meta property="og:description" content="Murals, canvases, wearable art, homeware and mixed media in bold colour, by London artist Antoinette Jordaine." />
 <meta property="og:image" content="https://antoinettejordaine.com/img/wanderlust.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Gallery, Antoinette Jordaine ARt" />
@@ -52,11 +52,13 @@
   .gallery-head { max-width: 640px; margin-bottom: 56px; }
   .gallery-head h1 { font-size: clamp(34px, 5vw, 60px); margin-bottom: 16px; }
   .gallery-head p { color: var(--ink-soft); font-size: 18px; }
+  .gallery-head .hint { display: inline-block; margin-top: 18px; font-family: 'Josefin Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.22em; font-size: 11px; color: var(--ink-soft); }
 
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .card { position: relative; overflow: hidden; background: var(--grey); display: block; aspect-ratio: 1 / 1; }
-  .card img { width: 100%; height: 100%; object-fit: cover; }
-  .card .overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; color: #fff; opacity: 0; transition: opacity .45s var(--ease); background: linear-gradient(to top, rgba(20,20,20,0.74), rgba(20,20,20,0) 62%); }
+  .card { position: relative; overflow: hidden; background: var(--grey); display: block; aspect-ratio: 1 / 1; cursor: pointer; border: 0; padding: 0; width: 100%; }
+  .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
+  .card:hover img, .card:focus-visible img { transform: scale(1.045); }
+  .card .overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 22px; color: #fff; opacity: 0; transition: opacity .45s var(--ease); background: linear-gradient(to top, rgba(20,20,20,0.74), rgba(20,20,20,0) 62%); text-align: left; }
   .card:hover .overlay, .card:focus-visible .overlay { opacity: 1; }
   .card .overlay .t { font-family: 'Josefin Sans', sans-serif; font-weight: 400; letter-spacing: 0.08em; font-size: 19px; }
   .card .overlay .m { font-size: 13.5px; letter-spacing: 0.04em; opacity: .9; margin-top: 4px; }
@@ -64,6 +66,22 @@
   .more { text-align: center; margin-top: 64px; padding: 46px 0; border-top: 1px solid rgba(26,26,26,.08); }
   .more .serif { font-size: clamp(20px, 3vw, 28px); color: var(--ink-soft); }
   .more .eyebrow { margin-top: 16px; }
+
+  /* LIGHTBOX */
+  .lb { position: fixed; inset: 0; z-index: 200; background: rgba(18,18,16,0.95); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity .4s var(--ease), visibility .4s var(--ease); }
+  .lb.open { opacity: 1; visibility: visible; }
+  .lb-stage { max-width: 90vw; max-height: 88vh; display: flex; flex-direction: column; align-items: center; }
+  .lb-img { max-width: 90vw; max-height: 76vh; object-fit: contain; box-shadow: 0 24px 70px rgba(0,0,0,.55); opacity: 0; transition: opacity .35s var(--ease); }
+  .lb-img.ready { opacity: 1; }
+  .lb-cap { margin-top: 20px; text-align: center; color: #fff; max-width: 60ch; }
+  .lb-cap .t { font-family: 'Josefin Sans', sans-serif; font-weight: 400; letter-spacing: 0.1em; font-size: 20px; }
+  .lb-cap .m { font-size: 13.5px; letter-spacing: 0.05em; color: rgba(255,255,255,.72); margin-top: 6px; }
+  .lb-btn { position: absolute; background: none; border: 0; color: #fff; cursor: pointer; font-family: 'Josefin Sans', sans-serif; opacity: .82; transition: opacity .3s var(--ease); line-height: 1; -webkit-tap-highlight-color: transparent; }
+  .lb-btn:hover, .lb-btn:focus-visible { opacity: 1; }
+  .lb-close { top: 24px; right: 30px; font-size: 30px; font-weight: 300; }
+  .lb-prev, .lb-next { top: 50%; transform: translateY(-50%); font-size: 40px; font-weight: 300; padding: 12px 18px; }
+  .lb-prev { left: 14px; } .lb-next { right: 14px; }
+  .lb-count { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.6); font-family: 'Josefin Sans', sans-serif; letter-spacing: 0.24em; font-size: 11px; text-transform: uppercase; }
 
   /* FOOTER */
   footer { background: var(--cream); padding: 70px 0 40px; border-top: 1px solid rgba(26,26,26,.08); }
@@ -76,8 +94,8 @@
   .ig-icon { width: 14px; height: 14px; vertical-align: -2px; margin-right: 7px; }
   .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(26,26,26,.08); display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
 
-  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .foot-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { body { font-size: 16px; } .grid { grid-template-columns: 1fr; } .nav-links { gap: 18px; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
+  @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } .foot-grid { grid-template-columns: 1fr 1fr; } .lb-prev, .lb-next { font-size: 32px; padding: 10px 12px; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .grid { grid-template-columns: 1fr; } .nav-links { gap: 18px; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } .lb-img { max-height: 68vh; } }
 </style>
 </head>
 <body>
@@ -99,34 +117,83 @@
     <div class="gallery-head">
       <div class="stripe"></div>
       <h1>Gallery</h1>
-      <p>A growing collection of work by Antoinette Jordaine. Murals, canvases, wearable art and mixed media, in bold colour and words that affirm.</p>
+      <p>A growing collection of work by Antoinette Jordaine. Murals, canvases, wearable art, homeware and mixed media, in bold colour and words that affirm.</p>
+      <span class="hint">Click any piece to view</span>
     </div>
 
-    <div class="grid">
-      <a class="card" href="commissions.html">
-        <img src="./img/wanderlust.jpg" alt="Wanderlust, pop art canvas of London landmarks by Antoinette Jordaine" />
+    <div class="grid" id="grid">
+      <button class="card" type="button" data-full="./img/wanderlust.jpg" data-title="Wanderlust" data-medium="Pop art canvas &middot; mixed media">
+        <img src="./img/wanderlust.jpg" alt="Wanderlust, pop art canvas of London landmarks by Antoinette Jordaine" loading="lazy" />
         <div class="overlay"><span class="t">Wanderlust</span><span class="m">Pop art canvas &middot; mixed media</span></div>
-      </a>
-      <a class="card" href="commissions.html">
-        <img src="./img/do-you-darling.jpg" alt="Do You Darling, hand-painted suede coat by Antoinette Jordaine" />
+      </button>
+      <button class="card" type="button" data-full="./img/do-you-darling.jpg" data-title="Do You Darling" data-medium="Wearable art &middot; hand-painted coat">
+        <img src="./img/do-you-darling.jpg" alt="Do You Darling, hand-painted suede coat by Antoinette Jordaine" loading="lazy" />
         <div class="overlay"><span class="t">Do You Darling</span><span class="m">Wearable art &middot; hand-painted coat</span></div>
-      </a>
-      <a class="card" href="commissions.html">
-        <img src="./img/you-have-got-this.jpg" alt="YOU HAVE GOT THIS, street mural by Antoinette Jordaine" />
+      </button>
+      <button class="card" type="button" data-full="./img/you-have-got-this.jpg" data-title="You Have Got This" data-medium="Street mural">
+        <img src="./img/you-have-got-this.jpg" alt="YOU HAVE GOT THIS, street mural by Antoinette Jordaine" loading="lazy" />
         <div class="overlay"><span class="t">You Have Got This</span><span class="m">Street mural</span></div>
-      </a>
-      <a class="card" href="commissions.html">
-        <img src="./img/painted-palladiums.jpg" alt="Hand-painted canvas boots by Antoinette Jordaine" />
+      </button>
+      <button class="card" type="button" data-full="./img/grateful-jacket.jpg" data-title="Grateful" data-medium="Wearable art &middot; hand-painted jacket">
+        <img src="./img/grateful-jacket.jpg" alt="Grateful, hand-painted jacket by Antoinette Jordaine, worn at the Royal Academy" loading="lazy" />
+        <div class="overlay"><span class="t">Grateful</span><span class="m">Wearable art &middot; hand-painted jacket</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/you-make-me-smile.jpg" data-title="You Make Me Smile" data-medium="Affirmation &middot; mixed media">
+        <img src="./img/you-make-me-smile.jpg" alt="You Make Me Smile, affirmation piece in mixed media by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">You Make Me Smile</span><span class="m">Affirmation &middot; mixed media</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/vessel-sculptural.jpg" data-title="Vessel" data-medium="Sculptural homeware &middot; mixed media">
+        <img src="./img/vessel-sculptural.jpg" alt="Sculptural vessel, mixed media homeware by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Vessel</span><span class="m">Sculptural homeware &middot; mixed media</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/be-kind.jpg" data-title="Be Kind" data-medium="Op-art &middot; pen &amp; marker">
+        <img src="./img/be-kind.jpg" alt="Be Kind, op-art drawing in pen and marker by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Be Kind</span><span class="m">Op-art &middot; pen &amp; marker</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/painted-palladiums.jpg" data-title="Painted Palladiums" data-medium="Wearable art &middot; hand-painted boots">
+        <img src="./img/painted-palladiums.jpg" alt="Hand-painted canvas boots by Antoinette Jordaine" loading="lazy" />
         <div class="overlay"><span class="t">Painted Palladiums</span><span class="m">Wearable art &middot; hand-painted boots</span></div>
-      </a>
-      <a class="card" href="commissions.html">
-        <img src="./img/body-series.jpg" alt="Body Series, acrylic, gold leaf and Swarovski crystals" />
+      </button>
+      <button class="card" type="button" data-full="./img/fashion-pop-art.jpg" data-title="Fast Fashion" data-medium="Pop art canvas &middot; acrylic">
+        <img src="./img/fashion-pop-art.jpg" alt="Pop art canvas exploring fashion and consumer culture by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Fast Fashion</span><span class="m">Pop art canvas &middot; acrylic</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/vessel-gold-rim.jpg" data-title="Gold Rim Vessel" data-medium="Homeware &middot; ceramic &amp; gold leaf">
+        <img src="./img/vessel-gold-rim.jpg" alt="Bowl with gold-leaf rim, homeware by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Gold Rim Vessel</span><span class="m">Homeware &middot; ceramic &amp; gold leaf</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/body-series.jpg" data-title="Body Series" data-medium="Acrylic, gold leaf &amp; Swarovski crystals &middot; 2025">
+        <img src="./img/body-series.jpg" alt="Body Series, acrylic, gold leaf and Swarovski crystals" loading="lazy" />
         <div class="overlay"><span class="t">Body Series</span><span class="m">Acrylic, gold leaf &amp; Swarovski crystals &middot; 2025</span></div>
-      </a>
-      <a class="card" href="commissions.html">
-        <img src="./img/encona.jpg" alt="Encona Hot Pepper Sauce, pop art painting by Antoinette Jordaine, 2016" />
+      </button>
+      <button class="card" type="button" data-full="./img/be-kind-jacket.jpg" data-title="Be Kind" data-medium="Wearable art &middot; hand-painted linen jacket">
+        <img src="./img/be-kind-jacket.jpg" alt="Be Kind, hand-painted linen jacket by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Be Kind</span><span class="m">Wearable art &middot; hand-painted linen jacket</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/vessel-dish.jpg" data-title="Dish" data-medium="Homeware &middot; papier-m&acirc;ch&eacute;">
+        <img src="./img/vessel-dish.jpg" alt="Large papier-mache dish, homeware by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Dish</span><span class="m">Homeware &middot; papier-m&acirc;ch&eacute;</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/encona.jpg" data-title="Encona" data-medium="Pop art painting &middot; 2016">
+        <img src="./img/encona.jpg" alt="Encona Hot Pepper Sauce, pop art painting by Antoinette Jordaine, 2016" loading="lazy" />
         <div class="overlay"><span class="t">Encona</span><span class="m">Pop art painting &middot; 2016</span></div>
-      </a>
+      </button>
+      <button class="card" type="button" data-full="./img/op-art-sweatshirt.jpg" data-title="Op-Art Sweatshirt" data-medium="Wearable art &middot; hand-painted">
+        <img src="./img/op-art-sweatshirt.jpg" alt="Op-art hand-painted sweatshirt by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Op-Art Sweatshirt</span><span class="m">Wearable art &middot; hand-painted</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/vessel-gold-leaf.jpg" data-title="Gold Leaf Vessel" data-medium="Homeware &middot; mixed media &amp; gold leaf">
+        <img src="./img/vessel-gold-leaf.jpg" alt="Vessel with gold leaf detail, homeware by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Gold Leaf Vessel</span><span class="m">Homeware &middot; mixed media &amp; gold leaf</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/painted-boxes.jpg" data-title="Painted Boxes" data-medium="Homeware &middot; hand-painted wood">
+        <img src="./img/painted-boxes.jpg" alt="Two hand-painted wooden boxes with tropical leaf motifs by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Painted Boxes</span><span class="m">Homeware &middot; hand-painted wood</span></div>
+      </button>
+      <button class="card" type="button" data-full="./img/abstract-figures.jpg" data-title="Figures" data-medium="Acrylic on canvas">
+        <img src="./img/abstract-figures.jpg" alt="Abstract figurative canvas in bold colour by Antoinette Jordaine" loading="lazy" />
+        <div class="overlay"><span class="t">Figures</span><span class="m">Acrylic on canvas</span></div>
+      </button>
     </div>
 
     <div class="more">
@@ -135,6 +202,18 @@
     </div>
   </div>
 </main>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Artwork viewer">
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close">&times;</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous">&#8249;</button>
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next">&#8250;</button>
+  <div class="lb-stage">
+    <img class="lb-img" id="lbImg" src="" alt="" />
+    <div class="lb-cap"><div class="t" id="lbTitle"></div><div class="m" id="lbMedium"></div></div>
+  </div>
+  <div class="lb-count" id="lbCount"></div>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -163,6 +242,58 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#grid .card'));
+  var lb = document.getElementById('lb');
+  var lbImg = document.getElementById('lbImg');
+  var lbTitle = document.getElementById('lbTitle');
+  var lbMedium = document.getElementById('lbMedium');
+  var lbCount = document.getElementById('lbCount');
+  var current = 0;
+
+  function decode(s) { var t = document.createElement('textarea'); t.innerHTML = s; return t.value; }
+
+  function show(i) {
+    current = (i + cards.length) % cards.length;
+    var c = cards[current];
+    lbImg.classList.remove('ready');
+    var src = c.getAttribute('data-full');
+    lbImg.onload = function () { lbImg.classList.add('ready'); };
+    lbImg.src = src;
+    lbImg.alt = c.querySelector('img').alt;
+    lbTitle.textContent = decode(c.getAttribute('data-title'));
+    lbMedium.innerHTML = c.getAttribute('data-medium');
+    lbCount.textContent = (current + 1) + ' / ' + cards.length;
+  }
+
+  function open(i) { show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+  cards.forEach(function (c, i) { c.addEventListener('click', function () { open(i); }); });
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', function (e) { e.stopPropagation(); show(current - 1); });
+  document.getElementById('lbNext').addEventListener('click', function (e) { e.stopPropagation(); show(current + 1); });
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target === lbImg.parentNode) close(); });
+
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(current - 1);
+    else if (e.key === 'ArrowRight') show(current + 1);
+  });
+
+  // Touch swipe on the lightbox
+  var x0 = null;
+  lb.addEventListener('touchstart', function (e) { x0 = e.changedTouches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 45) show(current + (dx < 0 ? 1 : -1));
+    x0 = null;
+  }, { passive: true });
+})();
+</script>
 <script src="./js/cookie-consent.js" defer></script>
 </body>
 </html>
