@@ -71,6 +71,12 @@
   .brand-lockup { display: inline-block; }
   .brand-logo { height: 22px; width: auto; display: inline-block; vertical-align: middle; margin-left: 11px; }
   .foot-logo { height: 58px; width: auto; display: block; margin-bottom: 18px; }
+  .menu-btn { display: none; background: none; border: 0; cursor: pointer; width: 30px; height: 22px; position: relative; z-index: 110; }
+  .menu-btn span { position: absolute; left: 0; height: 2px; width: 100%; background: var(--ink); transition: .4s var(--ease); }
+  .menu-btn span:nth-child(1){ top: 0; } .menu-btn span:nth-child(2){ top: 10px; } .menu-btn span:nth-child(3){ top: 20px; }
+  .menu-btn.open span:nth-child(1){ top: 10px; transform: rotate(45deg); }
+  .menu-btn.open span:nth-child(2){ opacity: 0; }
+  .menu-btn.open span:nth-child(3){ top: 10px; transform: rotate(-45deg); }
 
   /* PAGE */
   .page { padding: 150px 0 100px; }
@@ -96,7 +102,7 @@
   .foot-bottom { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(26,26,26,.08); display: flex; justify-content: space-between; font-size: 13px; color: var(--ink-soft); letter-spacing: 0.04em; }
 
   @media (max-width: 900px) { .about-layout { grid-template-columns: 1fr; gap: 36px; } .foot-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { body { font-size: 16px; } .nav-links { gap: 18px; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
+  @media (max-width: 640px) { body { font-size: 16px; } .nav-links { position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 34px; background: var(--cream); transform: translateX(100%); transition: transform .5s var(--ease); } .nav-links.open { transform: none; } .nav-links a { font-size: 20px; } .menu-btn { display: block; } .foot-grid { grid-template-columns: 1fr; } .foot-bottom { flex-direction: column; gap: 8px; } }
 </style>
 </head>
 <body>
@@ -112,6 +118,7 @@
     <a href="commissions.html">Commissions</a>
     <a href="contact.html">Contact</a>
   </div>
+  <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- PAGE -->
@@ -160,6 +167,18 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn=document.querySelector('.menu-btn'), links=document.querySelector('.nav-links');
+  if(!btn||!links) return;
+  btn.addEventListener('click',function(){
+    var open=links.classList.toggle('open'); btn.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){links.classList.remove('open');btn.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+})();
+</script>
 <script src="./js/cookie-consent.js" defer></script>
 </body>
 </html>
