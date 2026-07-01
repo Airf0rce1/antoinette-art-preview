@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /studio-team.html
 Disallow: /seo-plan.html
+Disallow: /seo-intake.html
 
 Sitemap: https://antoinettejordaine.com/sitemap.xml
